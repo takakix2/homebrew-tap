@@ -1,25 +1,25 @@
 class Cozy < Formula
   desc "A Comfort First terminal text editor: type like nano, navigate like vim"
   homepage "https://labs.navii.online/"
-  version "0.2.22"
+  version "0.2.23"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/takakix2/cozy/releases/download/v0.2.22/cozy-aarch64-apple-darwin.tar.gz"
-      sha256 "b2fcbd406992f593095e30977a3fbdd0163b32b0993378430d039160ef1d5ea1"
+      url "https://github.com/takakix2/cozy/releases/download/v0.2.23/cozy-aarch64-apple-darwin.tar.gz"
+      sha256 "65b7166f2149e65f2022efbeeaccb30cff645364873cfa7501ad4bad5f27a04b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/takakix2/cozy/releases/download/v0.2.22/cozy-x86_64-apple-darwin.tar.gz"
-      sha256 "d6bd778b6a7205a3afd87a9270fa96d6aa9fef4b045bdd95acc07c7edfe93a05"
+      url "https://github.com/takakix2/cozy/releases/download/v0.2.23/cozy-x86_64-apple-darwin.tar.gz"
+      sha256 "69a50614926ae29444b66aa7ffe32fed52681398c053ff590b94fd8b885f531d"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/takakix2/cozy/releases/download/v0.2.22/cozy-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "8cf4b0c3fbaf5096cd2ac73317f6b9e5cfa3a96987c000b2fffb6153fd244701"
+      url "https://github.com/takakix2/cozy/releases/download/v0.2.23/cozy-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "0fa5b934841aeb6b90433eddb354c4c90d8b9e227790e91e0812d51b1f9f01dc"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/takakix2/cozy/releases/download/v0.2.22/cozy-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "2b10801c64428453375033b6bb3125ff892fec05bf934273bb219cfeb1841dc7"
+      url "https://github.com/takakix2/cozy/releases/download/v0.2.23/cozy-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "d0db295aa3a34e15a9617f45344a32ee5952ca4db77baba96d2eb8f9bc7236f8"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
