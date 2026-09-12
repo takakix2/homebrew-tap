@@ -1,25 +1,25 @@
 class Cozy < Formula
-  desc "A Comfort First terminal text editor: type like nano, navigate like vim"
+  desc "A Comfort First terminal editor and pager: type like nano, navigate like vim"
   homepage "https://labs.navii.online/"
-  version "0.2.32"
+  version "0.2.33"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/takakix2/cozy/releases/download/v0.2.32/cozy-aarch64-apple-darwin.tar.gz"
-      sha256 "4cf1322625ef5442305b13da3c79029bac94e966fa832be9bc56fd184cd1bff2"
+      url "https://github.com/takakix2/cozy/releases/download/v0.2.33/cozy-aarch64-apple-darwin.tar.gz"
+      sha256 "36650eaec95e5bd1a745964d3722bb4df57d30e9372b42289da9852e19973eb7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/takakix2/cozy/releases/download/v0.2.32/cozy-x86_64-apple-darwin.tar.gz"
-      sha256 "ac54e2c6aa909ccc51d8b93800ef63daf3ce19a6025b687aff2903fa81d3d656"
+      url "https://github.com/takakix2/cozy/releases/download/v0.2.33/cozy-x86_64-apple-darwin.tar.gz"
+      sha256 "684cb053c61a0092eaa493ce72c670933553946ed063e022bf9eb9da8f5a8281"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/takakix2/cozy/releases/download/v0.2.32/cozy-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "c4859a952df1395ec21c28ebbc1f0468095df9155c1d96f0066580ff5e5704cf"
+      url "https://github.com/takakix2/cozy/releases/download/v0.2.33/cozy-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "b69b972d5564cce73f0f28cd72fda4e2eb617ef12d2673dfb891307c87b4a4a5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/takakix2/cozy/releases/download/v0.2.32/cozy-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "8b6ae08376f9a63b09999a814fc3356742bfae76782b8f64114a91a9329cd477"
+      url "https://github.com/takakix2/cozy/releases/download/v0.2.33/cozy-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "e7f8bd654c0a00bc97ed69157f8782bcefb123822a0ac77ef3a9f1f19c6a00da"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
@@ -48,16 +48,16 @@ class Cozy < Formula
 
   def install
     if OS.mac? && Hardware::CPU.arm?
-      bin.install "cozy"
+      bin.install "cozy", "czv"
     end
     if OS.mac? && Hardware::CPU.intel?
-      bin.install "cozy"
+      bin.install "cozy", "czv"
     end
     if OS.linux? && Hardware::CPU.arm?
-      bin.install "cozy"
+      bin.install "cozy", "czv"
     end
     if OS.linux? && Hardware::CPU.intel?
-      bin.install "cozy"
+      bin.install "cozy", "czv"
     end
 
     install_binary_aliases!
